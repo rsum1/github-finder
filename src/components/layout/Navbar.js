@@ -1,23 +1,22 @@
-import React, { Component } from 'react'
+import React from 'react'
 import GitHubIcon from '@material-ui/icons/GitHub';
 import PropTypes from 'prop-types'
 
 
-export class Navbar extends Component {
+const Navbar = ({title}) => {
 
-  static propTypes = {
-    title: PropTypes.string.isRequired,
-  }
-  render() {
     return (
       <nav className="navbar bg-primary">
         <h1>
           <GitHubIcon style={{marginRight:'10px'}}/>
-          {this.props.title}
+          {title}
           </h1>
       </nav>
     )
-  }
+  
+}
+ Navbar.propTypes = {
+  title: PropTypes.string.isRequired,
 }
 
 export default Navbar
